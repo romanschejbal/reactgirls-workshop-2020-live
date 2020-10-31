@@ -1,24 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import Footer from './components/Footer';
+
+import Layout from './components/Layout';
+import Main from './components/Main';
+import Navigation from './components/Navigation';
+import Home from './pages/Home';
+import Work from './pages/Work';
+
+function getPageByTitle(title) {
+  switch (title) {
+    case 'Home':
+      return <Home />;
+    case 'Work':
+      return <Work />;
+    default:
+      return <div>404 Not found</div>;
+  }
+}
 
 function App() {
+  const [activePage, setActivePage] = React.useState('Home');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Navigation
+        activePage={activePage}
+        setActivePage={setActivePage}
+        items={[
+          { title: 'Home', icon: 'fas fa-igloo' },
+          { title: 'Work', icon: 'fas fa-folder' },
+          // { title: 'Contact', icon: 'fas fa-envelope' },
+          {
+            title: 'Twitter',
+            icon: 'fab fa-twitter',
+            href: 'https://twitter.com/romanschejbal',
+          },
+          {
+            title: 'Instagram',
+            icon: 'fab fa-instagram',
+            href: 'https://instagram.com/roman.schejbal',
+          },
+        ]}
+      />
+      <Main>{getPageByTitle(activePage)}</Main>
+      <Footer>El Nina 2020</Footer>
+    </Layout>
   );
 }
 

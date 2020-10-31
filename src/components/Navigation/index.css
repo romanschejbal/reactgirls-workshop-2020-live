@@ -1,0 +1,48 @@
+.navigation {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.navigation li a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-size: 62px;
+  opacity: 0.5;
+  transition: 0.5s all;
+}
+
+.navigation li a.active,
+.navigation li a:hover {
+  opacity: 1;
+}
+
+.navigation li a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%) rotateZ(45deg);
+  width: 30px;
+  height: 30px;
+  background: #fff;
+}
+
+.navigation-title {
+  position: absolute;
+  font-size: 10px;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}

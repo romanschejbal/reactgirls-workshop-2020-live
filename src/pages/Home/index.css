@@ -1,0 +1,32 @@
+.home {
+  display: flex;
+}
+
+.intro-text {
+  flex: 1 1 350px;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-text h1 {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.intro-text h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  color: #aaa;
+}
+
+.intro-image {
+  flex: 1 1 150px;
+}
+
+.intro-image img {
+  width: 100%;
+  display: block;
+}

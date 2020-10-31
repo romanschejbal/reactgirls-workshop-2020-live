@@ -1,0 +1,27 @@
+p {
+  color: #666;
+}
+
+.images {
+  /* display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+  gap: 30px; */
+  margin: 0 -70px;
+}
+
+/* .image {
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 1s;
+  box-shadow: 0px 0px 0px #00000099;
+}
+
+.image:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 5px 10px #00000099;
+}
+
+.image img {
+  width: 100%;
+  display: block;
+} */
